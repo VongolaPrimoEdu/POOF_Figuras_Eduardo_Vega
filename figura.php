@@ -13,3 +13,17 @@ abstract class Figura implements Forma {
     public function __construct($color = 'sin color') {
         $this->color = $color;
     }
+
+        // Método abstracto
+        abstract public function dibujar();
+
+        // Método estático
+        public static function imprimirMensaje() {
+            echo "¡Esta es una figura!";
+        }
+    
+        // Destructor
+        public function __destruct() {
+            echo "Objeto destruido.";
+        }
+    }
