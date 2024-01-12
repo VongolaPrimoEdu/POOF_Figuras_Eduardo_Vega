@@ -80,3 +80,17 @@ $cuadrado->dibujar();
 
 // Llamada a un método estático
 Cuadrado::imprimirMensaje();
+
+
+// Serialización de un objeto
+$serializacion = serialize($cuadrado);
+echo "\nSerialización del cuadrado: $serializacion\n";
+
+// Deserialización de un objeto
+$cuadradoDeserializado = unserialize($serializacion);
+echo "Color del cuadrado deserializado: " . $cuadradoDeserializado->getColor() . "\n";
+
+// Destructor
+unset($cuadradoDeserializado);
+
+?>
