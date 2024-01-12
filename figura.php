@@ -65,3 +65,18 @@ class Cuadrado extends Figura {
         return $this->color;
     }
 }
+
+// Creación de un objeto Cuadrado
+$cuadrado = new Cuadrado(5, 'azul');
+
+// Acceso a un atributo protegido a través de un método público
+echo "Color del cuadrado: " . $cuadrado->getColor() . "\n";
+
+// Acceso a una constante
+echo "Número de lados: " . Cuadrado::NUM_LADOS . "\n";
+
+// Llamada a un método final
+$cuadrado->dibujar();
+
+// Llamada a un método estático
+Cuadrado::imprimirMensaje();
