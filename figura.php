@@ -27,3 +27,18 @@ abstract class Figura implements Forma {
             echo "Objeto destruido.";
         }
     }
+
+
+    // Declaración de una clase que hereda de Figura e implementa una interfaz
+class Cuadrado extends Figura {
+    // Atributos privados
+    private $lado;
+
+    // Constante
+    const NUM_LADOS = 4;
+
+    // Método constructor con sobrecarga
+    public function __construct($lado, $color = 'sin color') {
+        parent::__construct($color);
+        $this->lado = $lado;
+    }
