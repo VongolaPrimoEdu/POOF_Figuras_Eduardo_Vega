@@ -42,3 +42,26 @@ class Cuadrado extends Figura {
         parent::__construct($color);
         $this->lado = $lado;
     }
+
+    
+    // Método final que no puede ser sobrecargado
+    final public function dibujar() {
+        echo "Dibujando un cuadrado de color {$this->color} y lado {$this->lado}.";
+    }
+
+    // Método estático que llama al método estático de la clase padre
+    public static function imprimirMensaje() {
+        parent::imprimirMensaje();
+        echo " Este es un cuadrado.";
+    }
+
+    // Método para calcular el área
+    public function calcularArea() {
+        return $this->lado * $this->lado;
+    }
+
+    // Método para obtener el color (get)
+    public function getColor() {
+        return $this->color;
+    }
+}
